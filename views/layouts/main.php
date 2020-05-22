@@ -54,6 +54,10 @@ AppAsset::register($this);
                         'label' => '培训管理',
                         'url' => ['/training-stat'],// 将用户下拉菜单的班务连接到operate控制器的index方法，index默认可省略
                     ],
+                    [
+                        'label' => '用户管理',
+                        'url' => ['/user-management'],// 将用户下拉菜单的班务连接到operate控制器的index方法，index默认可省略
+                    ],
 //                        [
 //                            'label' => '考勤',
 //                            'url' => ['/site/present-info'],// 将用户下拉菜单的班务连接到operate控制器的index方法，index默认可省略
