@@ -27,10 +27,10 @@ class SiteController extends BaseController
         return [
             'access' => [
                 'class' => AccessControl::className(),
-                'only' => ['logout','training'],
+                'only' => ['logout','training','training-management'],
                 'rules' => [
                     [
-                        'actions' => ['logout','training'],
+                        'actions' => ['logout','training','training-management'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -242,10 +242,6 @@ class SiteController extends BaseController
             'user_department_id' => $user_department_id,
             'pagination' => $pagination,
         ]);
-    }
-
-    public function actionTrainingManagement(){
-        return '123';
     }
 
 }

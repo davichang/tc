@@ -36,7 +36,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     <td><?= Html::encode($training->teacher) ?></td>
                     <td><?= date("Y-m-d H:i:s",Html::encode($training->created_at)) ?></td>
                     <td>
-                        认证
+                        申请认证
                     </td>
                 </tr>
             <?php endforeach; ?>

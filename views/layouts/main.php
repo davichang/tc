@@ -51,8 +51,12 @@ AppAsset::register($this);
                 'label' => Yii::$app->user->identity->username, //显示用户名
                 'items' => [//创建子菜单，即下拉菜单.
                     [
-                        'label' => '培训管理',
+                        'label' => '教师认证',
                         'url' => ['/training-stat'],// 将用户下拉菜单的班务连接到operate控制器的index方法，index默认可省略
+                    ],
+                    [
+                        'label' => '培训管理',
+                        'url' => ['/training'],// 将用户下拉菜单的班务连接到operate控制器的index方法，index默认可省略
                     ],
                     [
                         'label' => '用户管理',
@@ -62,7 +66,11 @@ AppAsset::register($this);
 //                            'label' => '考勤',
 //                            'url' => ['/site/present-info'],// 将用户下拉菜单的班务连接到operate控制器的index方法，index默认可省略
 //                        ],
-//                    '<li class="divider"></li>',//加一条横线隔开
+                    '<li class="divider"></li>',//加一条横线隔开
+                    [
+                        'label' => '我的培训',
+                        'url' => ['/site/training'],// 将用户下拉菜单的班务连接到operate控制器的index方法，index默认可省略
+                    ],
                     ['label' => '资料', 'url' => ['/site/user-profile']], //用户资料链接，还未开发，先占用
                     [//退出菜单
                         'label' => '退出',
@@ -78,7 +86,7 @@ AppAsset::register($this);
                 'label' => Yii::$app->user->identity->username, //显示用户名
                 'items' => [//创建子菜单，即下拉菜单.
                     [
-                        'label' => '培训',
+                        'label' => '我的培训',
                         'url' => ['/site/training'],// 将用户下拉菜单的班务连接到operate控制器的index方法，index默认可省略
                     ],
 //                        [

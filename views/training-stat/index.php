@@ -12,12 +12,12 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="training-stat-index">
 
-    <p>
 
-    </p>
-    <div class="alert alert-warning">
-        注意：若二级部门开设培训需向教师发展中心申请报备，经教师发展中心审核批准后参加培训的教师才能进行相关认证。<?= Html::a('培训申请', ['create'], ['class' => 'btn btn-success']) ?>
+    <div class="alert alert-info">
+        本表格仅列出向本部门进行培训认证的学员信息，请根据实际情况进行审核。
     </div>
+
+
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <?= GridView::widget([
@@ -74,8 +74,6 @@ $this->params['breadcrumbs'][] = $this->title;
             ],
         ],
     ]); ?>
-    <div class="alert alert-info">
-        本表格仅列出向本部门进行相关培训申请的学员信息，请根据本部门的实际情况进行审核。
-    </div>
+
 
 </div>

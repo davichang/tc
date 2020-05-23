@@ -15,6 +15,10 @@ $this->params['breadcrumbs'][] = $this->title;
         <?= Html::a('添加用户', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
+    <div class="alert alert-warning">
+        <code>重置密码</code>：用于用户修改密码遗忘情况下的恢复功能，恢复后初始密码与工号相同。
+        <code>状态失效</code>：用于用户离职或更换部门对其本部门的状态设为失效。
+    </div>
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
@@ -42,9 +46,15 @@ $this->params['breadcrumbs'][] = $this->title;
             //'updated_at',
 
             [
-                'class' => 'yii\grid\ActionColumn',
-                'template' => '{view} {update}',
-
+                'label'=>'操作',
+                //'attribute'=>'province',
+                'enableSorting' => false,
+                'value'=>function($model){
+                    return Html::a('重置密码', "/order?id={$model->id}").'  '.Html::a('状态失效', "/order?id={$model->id}");
+                },
+                'format' => 'raw',
+                'headerOptions' => ['style'=>'color:red'],
+                'contentOptions' => ['style'=>'color:blue'],
             ],
         ],
     ]); ?>
